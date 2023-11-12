@@ -11,11 +11,11 @@ pipeline {
                 cleanWs()
             }
         }
-        stage('Git Checkout') {
-            steps {
-                git credentialsId: 'b6f5b887-5e4e-4be1-aa68-6f8029352900', url: 'https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git'
-            }
-        }
+        // stage('Git Checkout') {
+        //     steps {
+        //         git credentialsId: 'b6f5b887-5e4e-4be1-aa68-6f8029352900', url: 'https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git'
+        //     }
+        // }
         stage('Deploy Terraform') {
             steps {
                 script {
