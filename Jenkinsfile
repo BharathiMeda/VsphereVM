@@ -19,7 +19,7 @@ pipeline {
         stage('Deploy Terraform') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'fa0cdf88-8389-4964-bd69-5f779c57de90', passwordVariable: 'TF_VAR_vsphere_user', usernameVariable: 'TF_VAR_vsphere_password')]) {
+                    withCredentials([usernamePassword(credentialsId: 'fa0cdf88-8389-4964-bd69-5f779c57de90', passwordVariable: 'TF_VAR_vsphere_password', usernameVariable: 'TF_VAR_vsphere_user')]) {
                     //     string(credentialsId: '6c8b9d82-e08c-41f6-8c28-1069dc6ebd15', variable: 'TF_VAR_vm_admin_password'),
                     //     string(credentialsId: '7772736e-92df-4869-a758-a73d0acac951', variable: 'TF_VAR_domainpass')
                     //     ]) 
