@@ -1,0 +1,10 @@
+---
+# # Add AD groups to sudoer
+- name: Apply sudoer configuration to all machines
+  hosts: all
+  become: true
+  roles:
+   - sudoers
+
+
+

@@ -1,0 +1,4 @@
+---
+#tasks:
+#- name: Verify ntp daemon
+  - import_tasks: ntp.yml

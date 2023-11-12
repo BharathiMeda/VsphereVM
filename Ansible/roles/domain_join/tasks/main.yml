@@ -1,0 +1,58 @@
+---
+- name: Ubuntu install AD Domain packages
+  apt:
+    name: ['krb5-user','samba','sssd','sssd-tools','libnss-sss','libpam-sss','ntp','ntpdate','realmd','adcli']
+    state: present
+    update_cache: true
+  when: ansible_facts['os_family'] == "Debian"
+  tags: ad
+
+- name: Copy krb5.conf
+  template:
+    src: krb5.conf.j2
+    dest: /etc/krb5.conf
+    backup: true
+    owner: root
+    group: root
+    mode: 0644
+  tags: ad
+
+- name: Create kerberos ticket
+  expect:
+    command: /bin/bash -c "/usr/bin/kinit -V {{ kerberos_user }}"
+    responses:
+      (?i)Password: "{{ kerberos_user_password }}"
+  tags: ad
+
+- name: Join system to AD
+  expect:
+    command: realm join "{{ realm_domain }}" --computer-ou="{{ realm_ad_ou }}" --user="{{ kerberos_user }}"
+    responses:
+      (?i)Password: "{{ kerberos_user_password }}"
+  register: join_result
+  ignore_errors: true
+  become: true
+  tags: ad
+
+- name: Copy sssd.conf
+  template:
+    src: sssd.conf.j2
+    dest: /etc/sssd/sssd.conf
+    owner: root
+    group: root
+    mode: 0600
+  tags: ad
+
+# - name: Allow AD group
+#   command: realm permit -g "{{ item }}"
+#   become: true
+#   with_items:
+#     - "{{ matlock_group }}"
+#   notify: 
+#     - restart sssd
+#   tags: ad
+
+- name: Automatic home directory creation
+  command: pam-auth-update --enable mkhomedir
+  become: true
+  tags: ad

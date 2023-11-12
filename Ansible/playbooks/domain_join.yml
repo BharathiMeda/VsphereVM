@@ -1,0 +1,16 @@
+---
+
+# # Join linux box to AD domain.
+
+- name: Apply common configuration
+  hosts: all
+  become: true
+  roles:
+   - common
+
+- name: Apply configuration to all machines
+  hosts: all
+  become: true
+  roles:
+   - domain_join
+

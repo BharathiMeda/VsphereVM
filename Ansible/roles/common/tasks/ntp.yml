@@ -1,0 +1,34 @@
+---
+- name: Ubuntu install ntp packages
+  apt:
+    name: ['ntp','ntpdate']
+    state: present
+    update_cache: true
+  when: ansible_facts['os_family'] == "Debian"
+  tags: ntp
+
+- name: Copy ntp.conf
+  template:
+    src: ntp.conf.j2
+    dest: /etc/ntp.conf
+    owner: root
+    group: root
+    mode: 0600
+  tags: ntp
+
+- name: Stop service ntp, if started
+  ansible.builtin.service:
+    name: ntp
+    state: stopped
+  tags: ntp
+
+- name: Update ntp server
+  command: ntpdate "{{ ntp_server }}"
+  become: true
+  tags: ntp
+
+- name: Start service ntp, if stopped
+  ansible.builtin.service:
+    name: ntp
+    state: started
+  tags: ntp
