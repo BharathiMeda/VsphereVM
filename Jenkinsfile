@@ -13,7 +13,7 @@ pipeline {
         }
         stage('Git Checkout') {
             steps {
-                git credentialsId: '59362f52-7373-4c07-bc63-35fe9816b222', url: 'http://gitlab.ad.matlockhome.com/homelab/terraform-jenkins-vsphere-vm.git'
+                git credentialsId: 'b6f5b887-5e4e-4be1-aa68-6f8029352900', url: 'https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git'
             }
         }
         stage('Deploy Terraform') {
