@@ -68,7 +68,7 @@ pipeline {
                 }
             }
             steps {
-                withCredentials([file(credentialsId: 'cfd28f5b-2c72-49f1-b826-e48e27e88374', variable: 'my_vault_file')]) {
+                withCredentials([file(credentialsId: 'f5bf34e0-4fb8-4450-a641-8d4944f22ca9', variable: 'my_vault_file')]) {
                     script {
                         if (params.DOMAIN == "ad.matlockhome.com") {
                             //my_vault_file is a Jenkins credential that contains the plaintext password, which is used by Ansible to decrypt vault file
