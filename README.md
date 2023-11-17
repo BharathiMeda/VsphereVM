@@ -17,15 +17,14 @@ git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 ```
 
 ## Usage
-![File tree](https://i.imgur.com/aGO3pb8.png)
 
 Navigate to the Terraform directory and initialize the Terraform environment:
 
 ## Configuration
-Configure Terraform scripts in the /terraform directory.
-Update Ansible playbook in the /ansible directory as per your domain requirements.
-Modify Jenkinsfile if needed, located at the root of this repository.
-Contributing
+
+![File tree](https://i.imgur.com/aGO3pb8.png)
+
+## Contributing
 Contributions to this project are welcome. Please fork the repository and submit a pull request.
 
 ## License
