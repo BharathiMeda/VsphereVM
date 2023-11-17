@@ -13,7 +13,7 @@ This project automates the creation of virtual machines (VMs) in a VMware enviro
 Fork this repository if using GitHub.  Or clone to your local machine and push to your remote repository.
 
 ```
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 ```
 
 ## Usage
