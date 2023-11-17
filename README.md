@@ -17,7 +17,7 @@ git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 ```
 
 ## Usage
-![Alt text](https://imgur.com/aGO3pb8)
+![File tree](https://i.imgur.com/aGO3pb8.png)
 
 Navigate to the Terraform directory and initialize the Terraform environment:
 
