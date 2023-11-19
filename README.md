@@ -16,11 +16,11 @@ Fork this repository.
 git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 ```
 
-## Usage
-
 1. Create a new Jenkins job
 2. Give your job a name and choose "Pipeline"
 3. Paste the Jenkinsfile contents into the Script section located below Pipeline.
+
+## Usage
 
 The Ansible playbook encrypts several files to hide sensitive variables.
 
