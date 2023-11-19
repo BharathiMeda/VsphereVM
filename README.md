@@ -3,6 +3,9 @@
 ## Description
 This project automates the creation of virtual machines (VMs) in a VMware environment using Terraform and configures these VMs to join a domain using an Ansible playbook with realm as a SSSD wrapper. It supports both Windows and Linux VMs. Additionally, a Jenkinsfile is included for automating the process of cloning this repository and executing the Terraform and Ansible scripts.
 
+## Demo
+![](https://i.imgur.com/9qWUdNE.gifv)
+
 ## Prerequisites
 * Terraform <= v1.6.1
 * Ansible
