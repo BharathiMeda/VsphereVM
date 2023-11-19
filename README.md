@@ -10,7 +10,7 @@ This project automates the creation of virtual machines (VMs) in a VMware enviro
 * Jenkins with Terraform and Ansible plugins installed
 
 ## Installation
-Fork this repository if using GitHub.  Or clone to your local machine and push to your remote repository.
+Fork this repository.
 
 ```
 git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
