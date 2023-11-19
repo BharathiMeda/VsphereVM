@@ -2,7 +2,7 @@
 realm_domain: ad.matlockhome.com
 # domain is case sensitive, use all caps for krb5
 krb5_default_realm: AD.MATLOCKHOME.COM
-# realm_ad_ou: OU=Linux,DC=ad,DC=matlockhome,DC=com
+realm_ad_ou: OU=Linux,DC=ad,DC=matlockhome,DC=com
 
 matlock_group: matlock-group
 
