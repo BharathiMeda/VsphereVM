@@ -73,7 +73,7 @@ pipeline {
                         if (params.DOMAIN == "ad.matlockhome.com") {
                             //my_vault_file is a Jenkins credential that contains the plaintext password, which is used by Ansible to decrypt vault file
                             sh """
-                                (cd Ansible; ansible-playbook -i ./hosts --vault-password-file "${my_vault_file}" ./playbooks/install_all.yml")
+                                (cd Ansible; ansible-playbook -i ./hosts --vault-password-file "\${my_vault_file}" ./playbooks/install_all.yml)
                             """ 
                         }
                     }
