@@ -24,20 +24,15 @@ git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 3. Paste the Jenkinsfile contents into the Script section located below Pipeline.
 
 ## Usage
+You need three credentials set up in Jenkins and their ID's added to the Jenkinsfile.
+
+![Screenshot 2023-11-19 at 5 21 40 PM](https://github.com/techmatlock/terraform-jenkins-vsphere-vm/assets/2618095/7e4fdc90-b1a4-470d-add4-17fe01df701e)
 
 The Ansible playbook assumes you've already encrypt your files to hide sensitive variables.
 
 These are the files that I encrypt by default:
 Ansible/group_vars/all/vault
 Ansible/hosts
-
-If you want to encrypt the files, you run:
-
-ansible-vault encrypt /path/to/file
-
-To decrypt:
-
-ansible-vault decrypt /path/to/file
 
 ## Configuration
 
