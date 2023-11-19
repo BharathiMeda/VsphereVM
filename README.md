@@ -30,9 +30,8 @@ You need three credentials set up in Jenkins and their ID's added to the Jenkins
 
 The Ansible playbook assumes you've already encrypt your files to hide sensitive variables.
 
-These are the files that I encrypt by default:
+I only encrypt the file vault file in the path below:
 * Ansible/group_vars/all/vault
-* Ansible/hosts
 
 ## Configuration
 
