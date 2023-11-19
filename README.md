@@ -29,8 +29,11 @@ Ansible/group_vars/all/vault
 Ansible/hosts
 
 If you want to encrypt the files, you run:
+
 ansible-vault encrypt /path/to/file
+
 To decrypt:
+
 ansible-vault decrypt /path/to/file
 
 ## Configuration
