@@ -1,0 +1,7 @@
+[all:vars]
+ansible_connection=ssh
+ansible_user=root
+ansible_ssh_pass=P@ssw0rd
+
+[all]
+10.10.20.11

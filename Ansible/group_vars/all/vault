@@ -1,0 +1,3 @@
+---
+secret_kerberos_user: ansiblead@AD.MATLOCKHOME.COM
+secret_kerberos_password: P@ssw0rd
