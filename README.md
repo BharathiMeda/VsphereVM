@@ -8,9 +8,9 @@ This project automates the creation of virtual machines (VMs) in a VMware enviro
 
 ## Prerequisites
 * Terraform <= v1.6.1
-* Ansible
+* Ansible <= 2.15.6
 * VMware vSphere environment <= 8.0.1.00000
-* Jenkins with these plugins installed: Active Choices, Git
+* Jenkins with these plugins: Active Choices, Git
 
 ## Installation
 Fork this repository.
@@ -25,9 +25,9 @@ git clone https://github.com/techmatlock/terraform-jenkins-vsphere-vm.git
 
 ## Usage
 
-The Ansible playbook encrypts several files to hide sensitive variables.
+The Ansible playbook assumes you've already encrypt your files to hide sensitive variables.
 
-These are the files that are encrypted by default:
+These are the files that I encrypt by default:
 Ansible/group_vars/all/vault
 Ansible/hosts
 
