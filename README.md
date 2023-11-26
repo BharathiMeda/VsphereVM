@@ -28,9 +28,9 @@ You need three credentials set up in Jenkins and their ID's added to the Jenkins
 
 ![Screenshot 2023-11-19 at 5 21 40 PM](https://github.com/techmatlock/terraform-jenkins-vsphere-vm/assets/2618095/7e4fdc90-b1a4-470d-add4-17fe01df701e)
 
-The Ansible playbook assumes you've already encrypt your files to hide sensitive variables.
+The Ansible playbook assumes you've already encrypted your files to hide sensitive variables.
 
-I only encrypt the file vault file in the path below:
+I only encrypt the file "vault" in the path below (with the command ansible-vault encrypt vault):
 * Ansible/group_vars/all/vault
 
 ## Configuration
