@@ -37,5 +37,20 @@ I only encrypt the file "vault" in the path below (with the command ansible-vaul
 
 ![File tree](https://i.imgur.com/fkRKwn7.png)
 
+* If you want to deploy more than one virtual machine, here's an example of modifying the virtual_machines map variable.
+```
+terraform init
+terraform plan -var 'vm_domain=${params.DOMAIN}' \
+               -var 'vsphere_network=${params.VSPHERE_NETWORK}' \
+               -var 'vm_ipv4_netmask=$VSPHERE_NETMASK' \
+               -var 'vm_ipv4_gateway=$VSPHERE_GATEWAY' \
+               -var 'vsphere_compute_cluster=${params.COMPUTE_CLUSTER}' \
+               -var 'vsphere_datastore=${params.DATASTORE}' \
+               -var 'vsphere_folder=${params.ROOT_FOLDER}' \
+               -var 'virtual_machines={vm1: {name: "${params.VM_NAME1}", ip: "${params.IP1}"},
+                                       vm2: {name: "${params.VM_NAME2}", ip: "${params.IP2}"},
+                                       vm3: {name: "${params.VM_NAME3}", ip: "${params.IP3}"}}' -out myplan
+terraform apply --auto-approve myplan
+```
 ## Contributing
 Contributions to this project are welcome. Please fork the repository and submit a pull request.
