@@ -1,12 +1,12 @@
 ---
-realm_domain: ad.matlockhome.com
+realm_domain: stgcfrf.medtronic.com
 # domain is case sensitive, use all caps for krb5
-krb5_default_realm: AD.MATLOCKHOME.COM
-realm_ad_ou: OU=Linux,DC=ad,DC=matlockhome,DC=com
+krb5_default_realm: stgcfrf.medtronic.com
+realm_ad_ou: OU=Linux,DC=ad,DC=medtronic,DC=com
 
-matlock_group: matlock-group
+medtronic_group: medtronic-group
 
-ntp_server: dc01.ad.matlockhome.com
+ntp_server: dc01.stgcfrf.medtronic.com
 
 #Vault file contains user and password
 kerberos_user: "{{ secret_kerberos_user }}"
