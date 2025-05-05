@@ -2,8 +2,8 @@
   # TODO: add ansible set_fact module to detect realm or centrify
   - name: Add won dba us AD user to sudoers-- realm
     community.general.sudoers:
-      name: matlock-group
-      user: '"%{{ matlock_group }}"'
+      name: medtronic-group
+      user: '"%{{ medtronic_group }}"'
       state: present
       commands: ALL
       nopassword: false
