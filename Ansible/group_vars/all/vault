@@ -1,5 +1,5 @@
 ---
-secret_kerberos_user: ansiblead@AD.MATLOCKHOME.COM
+secret_kerberos_user: ansiblead@stgcfrf.medtronic.com
 secret_kerberos_password: P@ssw0rd
 
 secret_ansible_password: P@ssw0rd
